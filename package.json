@@ -1,0 +1,24 @@
+{
+  "name": "authentication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "config": "node config/create.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Imfeld @martianfield",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "jsonwebtoken": "^5.4.1",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
+}
