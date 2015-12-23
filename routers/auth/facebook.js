@@ -7,14 +7,12 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 
 // get configuration
 const config = require(__dirname + '/../../config/config.js');
-const configFacebook = config.auth.facebook;
-const configJwt = config.jwt;
 
 // set up passport to use facebook strategy
 const optionsFacebook = {
-	clientID: configFacebook.appId,
-	clientSecret: configFacebook.appSecret,
-	callbackURL: configFacebook.callbackUrl,
+	clientID: config.auth.facebook.appId,
+	clientSecret: config.auth.facebook.appSecret,
+	callbackURL: config.auth.facebook.callbackUrl,
 	profileFields: ['id', 'displayName', 'emails', 'name', 'profileUrl', 'gender']
 };
 passport.use( new FacebookStrategy(
@@ -52,12 +50,9 @@ router.get('/callback',
 			// TODO: save or create user in database
 
 			// create token
-			var token = jwt.sign(user, configJwt.secret);
-			console.log("token:" + token);
-			// save user to request
-			//req.user = user;
+			var token = jwt.sign(user, config.jwt.secret);
 
-			// redirect to profile page (for now)
+			// redirect to login callback page, taking the token along so we can use it client side
 			res.redirect('/login/callback?token=' + token);
 		}
 		else {

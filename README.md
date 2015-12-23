@@ -19,7 +19,7 @@ Select a authentication provider, and log in using it.
 
 When authentication is successful, you will end up at `/login/callback?token=<sometoken>`.
 
-Use the token provided in the query string to continue from here.
+Use the token provided in the query string and continue from there.
 
 
 ## Batteries Excluded
