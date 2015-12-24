@@ -21,6 +21,7 @@ var prompts = [
 	{message: "Google Client Secret", name: "googleClientSecret"},
 	{message: "Google Callback Url", name: "googleCallbackUrl"},
 	{message: "Token Secret", name: "jwtSecret"},
+	{message: "Token Expires In (seconds or a string describing time spam", name: "jwtExpiresIn"},
 	{message: "Mongo URI", name:"mongoUri"}
 ]
 
@@ -40,6 +41,7 @@ prompt.get(prompts, (err, result) => {
 	config.auth.google.clientSecret = result.googleClientSecret;
 	config.auth.google.callbackUrl = result.googleCallbackUrl;
 	config.jwt.secret = result.jwtSecret;
+	config.jwt.expiresIn = result.jwtExpiresIn;
 	config.mongo.uri = result.mongoUri;
 	saveConfig(config);
 });

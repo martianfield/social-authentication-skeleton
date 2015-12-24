@@ -64,7 +64,7 @@ router.get(
 			// create a user object
 			let user = userFromRequest(req);
 			// create token
-			let token = jwt.sign(user, config.jwt.secret);
+			let token = jwt.sign(user, config.jwt.secret, {expiresIn:config.jwt.expiresIn});
 			// redirect to login callback page, taking the token along so we can use it client side
 			res.redirect('/login/callback?token=' + token);
 		} 
