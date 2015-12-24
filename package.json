@@ -1,7 +1,7 @@
 {
-  "name": "authentication",
-  "version": "1.0.0",
-  "description": "",
+  "name": "social-authentication-skeleton",
+  "version": "0.1.0",
+  "description": "A NodeJS skeleton application providing social authentication workflow.",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -16,9 +16,18 @@
     "express": "^4.13.3",
     "jsonwebtoken": "^5.4.1",
     "passport": "^0.3.2",
-    "passport-facebook": "^2.0.0"
+    "passport-facebook": "^2.0.0",
+    "passport-google-oauth": "^0.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.8.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martianfield/social-authentication-skeleton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/martianfield/social-authentication-skeleton/issues"
+  },
+  "homepage": "https://github.com/martianfield/social-authentication-skeleton#readme"
 }

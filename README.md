@@ -28,3 +28,10 @@ This is just a skeleton application. There are a few pieces missing you need to 
 
 - Implement User Crud Operations
 - Store, manipulate and use the token
+
+## Creating Applications
+
+To use Facebook, Google, etc. to authenticate users, you need to create Apps / Projects at
+
+- [Facebook](https://developers.facebook.com/apps)
+- [Google](https://console.developers.google.com/project). Note: You need to enable the Google+ API on the developers console for this to work! Also note: enabling this does not have immediate effect ... you may have to way a few minutes. Patience is a virtue, you know ;)

@@ -8,7 +8,7 @@ prompt.delimiter = "";
 var config = {};
 config.auth = {};
 config.auth.facebook = {};
-config.auth.twitter = {};
+config.auth.google = {};
 config.jwt = {};
 config.mongo = {};
 
@@ -17,6 +17,9 @@ var prompts = [
 	{message: "Facebook App ID", name: "facebookAppId"},
 	{message: "Facebook App Secret", name: "facebookAppSecret"},
 	{message: "Facebook Callback Url", name: "facebookCallbackUrl"},
+	{message: "Google Client ID", name: "googleClientId"},
+	{message: "Google Client Secret", name: "googleClientSecret"},
+	{message: "Google Callback Url", name: "googleCallbackUrl"},
 	{message: "Token Secret", name: "jwtSecret"},
 	{message: "Mongo URI", name:"mongoUri"}
 ]
@@ -33,6 +36,9 @@ prompt.get(prompts, (err, result) => {
 	config.auth.facebook.appId = result.facebookAppId;
 	config.auth.facebook.appSecret = result.facebookAppSecret;
 	config.auth.facebook.callbackUrl = result.facebookCallbackUrl;
+	config.auth.google.clientId = result.googleClientId;
+	config.auth.google.clientSecret = result.googleClientSecret;
+	config.auth.google.callbackUrl = result.googleCallbackUrl;
 	config.jwt.secret = result.jwtSecret;
 	config.mongo.uri = result.mongoUri;
 	saveConfig(config);
