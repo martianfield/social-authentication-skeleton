@@ -35,3 +35,46 @@ To use Facebook, Google, etc. to authenticate users, you need to create Apps / P
 
 - [Facebook](https://developers.facebook.com/apps)
 - [Google](https://console.developers.google.com/project). Note: You need to enable the Google+ API on the developers console for this to work! Also note: enabling this does not have immediate effect ... you may have to way a few minutes. Patience is a virtue, you know ;)
+
+
+## Token Examples
+
+* `iat` : issued at. The time the token was issued at. Numeric Date value.
+* `exp` : expiration. The time the token will expire. Numeric Date value.
+
+### Facebook
+
+```json
+{ 
+  "displayName": "John Doe", 
+  "firstName": "John", 
+  "lastName": "Doe", 
+  "emails": [ { "value": "john@doe.com" } ], 
+  "gender": "male", 
+  "authDisplayName": "John Doe", 
+  "authProvider": "facebook", 
+  "authId": "12345678901234567", 
+  "authProfileUrl": "https://www.facebook.com/app_scoped_user_id/12345678901234567/", 
+  "iat": 1456910119, 
+  "exp": 1456910129 
+}
+```
+
+### Google
+
+```json
+{ 
+  "displayName": "John Doe", 
+  "firstName": "John", 
+  "lastName": "Doe", 
+  "emails": [], 
+  "gender": "male", 
+  "authDisplayName": "John Doe", 
+  "authProvider": "google", 
+  "authId": "123456789012345678901", 
+  "authProfileUrl": "https://plus.google.com/+JohnDoe", 
+  "iat": 1456912683, 
+  "exp": 1456912693 
+}
+```
+
