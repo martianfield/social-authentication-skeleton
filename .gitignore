@@ -29,3 +29,6 @@ node_modules
 # Configuration (we do not want to accidentally share configurations)
 config/config.js
 config/config.created.js
+
+# IDE (Webstorm)
+.idea
