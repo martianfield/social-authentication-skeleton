@@ -34,7 +34,9 @@ This is just a skeleton application. There are a few pieces missing you need to 
 To use Facebook, Google, etc. to authenticate users, you need to create Apps / Projects at
 
 - [Facebook](https://developers.facebook.com/apps)
-- [Google](https://console.developers.google.com/project). Note: You need to enable the Google+ API on the developers console for this to work! Also note: enabling this does not have immediate effect ... you may have to way a few minutes. Patience is a virtue, you know ;)
+- [Google](https://console.developers.google.com/project). 
+  - make sure the the Google+ API is enabled
+  - note: enabling the Google+ API does not have immediate effect ... you may have to way a few minutes. Patience is a virtue, you know ;)
 
 
 ## Token Examples
